@@ -1,9 +1,7 @@
-Hello,
-Welcome to my potifolio website built statically with Next.js (TypeScript), TailwindCSS and React Icons.
+Hello world,
 
-It hase detailed information about my projects, skills, and contact information.
+Welcome to bucura Universe.
 
-I hope you enjoy it!
 
 Best regards,
-Diedudonne DUSINGIZIMANA
+Bucura Art.
