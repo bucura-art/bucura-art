@@ -24,7 +24,7 @@ const moara = localFont({
 });
 
 export const metadata: Metadata = {
-  title: "Heisdieudonne — portifolio",
+  title: "Bucura Art — portifolio",
   description:
     "Networking student and developer. Learning, building, and shipping real projects.",
 };

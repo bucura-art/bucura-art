@@ -8,9 +8,9 @@ export type Service = {
 
 export const services: Service[] = [
   {
-    name: "SEO",
+    name: "SEO & AEO",
     description:
-      "Improve your website's visibility with practical on-page and technical search optimization.",
+      "Improve your website's or app visibility with practical on-page and technical search optimization.",
     price: "Unspecified",
     cta: "Discuss SEO",
     href: "/contact",
@@ -32,11 +32,11 @@ export const services: Service[] = [
     href: "/contact",
   },
   {
-    name: "Network Assistance",
+    name: "Web/App Testing",
     description:
-      "Set up, troubleshoot, and improve reliable network connectivity for your home or business.",
+      "Ensure your website or app works as intended with thorough testing and quality assurance.",
     price: "Unspecified",
-    cta: "Get network support",
+    cta: "Get testing",
     href: "/contact",
   },
   {
@@ -56,19 +56,11 @@ export const services: Service[] = [
     href: "/contact",
   },
   {
-    name: "E-commerce Solutions",
-    description:
-      "Create and improve online storefronts that make it easier for customers to find and buy products.",
+    name: "Payment API Integration",
+      description:
+        "Integrate payment gateways and APIs to securely process transactions on your website or app.",
     price: "Unspecified",
-    cta: "Discuss e-commerce",
-    href: "/contact",
-  },
-  {
-    name: "Website Maintenance",
-    description:
-      "Keep your website current with ongoing updates, fixes, and performance improvements.",
-    price: "Unspecified",
-    cta: "Request maintenance",
+    cta: "Discuss Integration",
     href: "/contact",
   },
 ];

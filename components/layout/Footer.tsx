@@ -88,7 +88,7 @@ export default function Footer() {
           <div className="relative h-8 w-8 overflow-hidden rounded-full border border-border bg-muted/20">
             <Image
               src="/developer/bucura-icon.jpg"
-              alt="Heisdieudonne"
+              alt="Bucura art"
               fill
               className="object-cover"
             />

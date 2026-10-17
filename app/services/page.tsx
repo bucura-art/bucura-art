@@ -1,11 +1,15 @@
 import Link from "next/link";
 import { services } from "@/data/services";
+import UseCase from "@/components/home/UseCase";
 import WelcomeMessage from "@/components/layout/Welcome";
 import Navbar from "@/components/layout/Navbar";
 
 export default function ServicesPage() {
   return (
     <div className="min-h-screen bg-[#e6e6e6] [--foreground:222_47%_11%] text-foreground">
+      <div className="h-0 md:h-auto md:px-6 md:pt-6">
+        <Navbar topLeft />
+      </div>
       <div className="grid w-full grid-cols-1 gap-12 px-4 pb-24 pt-24 md:grid-cols-[minmax(0,2fr)_minmax(0,1fr)] md:px-6 md:pt-8">
         <main className="order-last min-w-0 md:order-first md:pt-24">
           <header className="mb-16 max-w-3xl">
@@ -44,7 +48,7 @@ export default function ServicesPage() {
 
         <aside className="order-first flex min-w-0 flex-col gap-8 md:order-last">
           <WelcomeMessage />
-          <Navbar />
+          <UseCase />
         </aside>
       </div>
     </div>

@@ -61,7 +61,7 @@ export const skills = [
     sources: ["School education", "Google"],
   },
   {
-    category: "Microsoft 360 Suite",
+    category: "Microsoft 365 Suite",
     items: [
       { name: "Microsoft word", level: 4 },
       { name: "Microsoft Excel", level: 3 },
@@ -74,17 +74,26 @@ export const skills = [
     sources: ["School education", "Google"],
   },
   {
-    category: "Operating Systems & Software Tools",
+    category: "Productivity Tools",
     items: [
-      { name: "Windows", level: 5 },
-      { name: "MacOS", level: 2 },
-      { name: "Linux", level: 1 },
-      { name: "Git & GitHub", level: 4 },
+      { name: "Git", level: 4 },
+      { name: "GitHub", level: 3 },
+      { name: "Notion", level: 5 },
+      { name: "calendly", level: 4 },
+      { name: "Airtable", level: 3 },
       { name: "Canva", level: 4 },
       { name: "Figma", level: 1 },
-      { name: "Notion", level: 1 },
       { name: "CapCut", level: 3 },
-      { name: "Adobe Photoshop", level: 1 },
+    ],
+    sources: ["W3Schools", "freeCodeCamp", "ChatGPT", "Google"],
+  },
+  {
+    category: "Operating Systems",
+    items: [
+      { name: "Windows", level: 5 },
+      { name: "Windows Server", level: 2 },
+      { name: "MacOS", level: 2 },
+      { name: "Linux", level: 1 },
     ],
     sources: ["school education", "Documentation", "ChatGPT", "Google"],
   },

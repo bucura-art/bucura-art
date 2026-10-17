@@ -97,7 +97,7 @@ function NavIcon({ name }: { name: NavIconName }) {
   );
 }
 
-export default function Navbar() {
+export default function Navbar({ topLeft = false }: { topLeft?: boolean }) {
   const pathname = usePathname();
 
   const isActive = (href: string) => {
@@ -108,15 +108,23 @@ export default function Navbar() {
   return (
     <nav
       aria-label="Main navigation"
-      className="fixed inset-x-0 bottom-0 top-auto z-50 flex w-full max-w-full justify-center py-3 md:sticky md:inset-x-auto md:bottom-auto md:top-0 md:justify-end"
+      className={`fixed inset-x-0 bottom-0 top-auto z-50 flex w-full max-w-full justify-center py-3 ${
+        topLeft
+          ? "md:fixed md:inset-x-auto md:bottom-auto md:left-6 md:top-6 md:w-fit md:justify-start md:py-0"
+          : "md:sticky md:inset-x-auto md:bottom-auto md:top-0 md:w-full md:justify-end"
+      }`}
     >
-      <div className="flex w-full max-w-full flex-nowrap items-center justify-between gap-0.5 rounded-3xl border border-slate-200 bg-white p-1.5 shadow-lg shadow-slate-900/10 sm:gap-1 sm:p-2">
+      <div className={`flex w-full max-w-full flex-nowrap items-center justify-between gap-0.5 rounded-3xl border border-slate-200 bg-white p-1.5 shadow-lg shadow-slate-900/10 sm:gap-1 sm:p-2 ${
+        topLeft ? "md:w-fit" : ""
+      }`}>
         {navLinks.map((link) => (
           <Link
             key={link.name}
             href={link.href}
             aria-current={isActive(link.href) ? "page" : undefined}
             className={`group flex min-w-0 flex-1 flex-col items-center gap-1 rounded-2xl px-1 py-1.5 text-[10px] transition-colors focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-500 sm:text-xs ${
+              topLeft ? "md:flex-none md:px-3" : ""
+            } ${
               isActive(link.href)
                 ? "bg-slate-100 font-semibold text-slate-950"
                 : "text-slate-600 hover:bg-slate-50 hover:text-slate-950"

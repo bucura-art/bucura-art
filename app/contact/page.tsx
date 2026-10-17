@@ -1,10 +1,7 @@
 import { socials } from "@/data/socials";
 import { profile } from "@/data/profile";
-import { faqs } from "@/data/faqs";
-import Faq from "@/components/faqs/Faq";
 import Link from "next/link";
 import Image from "next/image";
-import WelcomeMessage from "@/components/layout/Welcome";
 import Navbar from "@/components/layout/Navbar";
 
 const logoDevToken = process.env.LOGO_DEV_PUBLISHABLE_KEY?.trim();
@@ -64,19 +61,70 @@ function EmailIcon() {
 export default function ContactPage() {
   return (
     <div className="min-h-screen bg-[#e6e6e6] [--foreground:222_47%_11%] [--muted:215_16%_47%] [--border:214_32%_85%] text-foreground">
-      <div className="grid w-full grid-cols-1 gap-12 px-4 pb-24 pt-16 md:grid-cols-[minmax(0,2fr)_minmax(0,1fr)] md:px-6 md:pt-8">
-        <section className="order-last flex min-h-[80vh] min-w-0 flex-col justify-center py-8 md:order-first md:py-16">
-          <div className="max-w-3xl">
-            <h1 className="mb-8 text-slate-900">Contact</h1>
-            <p className="mb-12 text-2xl text-slate-900">
-              Hit my line to sort it out in minutes not weeks.
-            </p>
+      <div className="h-0 md:h-auto md:px-6 md:pt-6">
+        <Navbar topLeft />
+      </div>
+      <main className="flex h-[100svh] items-center justify-start overflow-hidden px-4 pb-24 pt-4 md:px-8 md:pb-8 md:pt-24">
+        <section
+          aria-labelledby="contact-heading"
+          className="w-full max-w-[18rem] rounded-[2rem]  border-slate-900 bg-slate-400 p-1 shadow-xl shadow-slate-900/20"
+        >
+          <div className="overflow-hidden rounded-[1.6rem] bg-white">
+            <div className="flex justify-center bg-white pt-2" aria-hidden="true">
+              <span className="h-1 w-12 rounded-full bg-slate-200" />
+            </div>
 
-            <div className="grid gap-6 md:grid-cols-2">
+            <div className="px-4 pb-4 pt-3">
+              <h1
+                id="contact-heading"
+                className="mb-4 text-center text-xl font-bold tracking-tight text-slate-900"
+              >
+                Contact
+              </h1>
+
+              <div className="flex flex-col items-center text-center">
+                <div className="rounded-full bg-gradient-to-br from-indigo-400 via-violet-500 to-sky-400 p-0.5 shadow-md shadow-indigo-500/20">
+                  <Image
+                    src="/developer/profile-picture.jpg"
+                    alt="Profile picture"
+                    width={88}
+                    height={88}
+                    priority
+                    className="size-20 rounded-full border-2 border-white object-cover"
+                  />
+                </div>
+
+                <div className="mt-3 flex items-center justify-center gap-1.5 text-slate-900">
+                  <svg
+                    aria-hidden="true"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    strokeWidth="1.8"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    className="h-4 w-4 shrink-0 text-slate-500"
+                  >
+                    <path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z" />
+                    <circle cx="12" cy="10" r="3" />
+                  </svg>
+                  <p className="text-sm font-semibold">{profile.location}</p>
+                </div>
+                <p className="mt-1 inline-flex items-center gap-1.5 rounded-full bg-emerald-50 px-2.5 py-0.5 text-xs font-medium text-emerald-700">
+                  <span
+                    aria-hidden="true"
+                    className="size-1.5 rounded-full bg-emerald-500"
+                  />
+                  24/7 Available
+                </p>
+              </div>
+
+              <div className="my-4 h-px bg-slate-100" />
+
               <div
                 role="group"
                 aria-label="Social links"
-                className="flex flex-wrap gap-4 md:col-span-2"
+                className="grid grid-cols-2 gap-2"
               >
                 {socials
                   .filter(
@@ -94,15 +142,18 @@ export default function ContactPage() {
                           : social.platform === "Phone"
                             ? "Call"
                             : "Email";
+                    const isExternal = social.url.startsWith("https://");
+
                     return (
                       <Link
                         key={social.platform}
                         href={social.url}
-                        target="_blank"
+                        target={isExternal ? "_blank" : undefined}
+                        rel={isExternal ? "noreferrer" : undefined}
                         aria-label={`${social.platform}: ${social.username}`}
-                        className="group flex w-16 flex-col items-center gap-2 text-center text-xs font-medium text-slate-700 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent"
+                        className="group flex min-h-16 flex-col items-center justify-center gap-1 rounded-xl border border-slate-200 bg-slate-50 px-2 py-2 text-center text-xs font-semibold text-slate-700 transition hover:border-indigo-300 hover:bg-indigo-50 hover:text-indigo-700 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent"
                       >
-                        <span className="flex h-14 w-14 items-center justify-center rounded-full border border-slate-200 bg-white p-3 text-slate-900 transition-colors group-hover:border-accent">
+                        <span className="flex size-7 items-center justify-center rounded-full bg-white text-slate-900 shadow-sm transition group-hover:text-indigo-700">
                           {social.platform.toLowerCase() === "email" ? (
                             <EmailIcon />
                           ) : logoDomain && hasLogoDevToken ? (
@@ -112,13 +163,10 @@ export default function ContactPage() {
                               width={96}
                               height={96}
                               unoptimized
-                              className="h-full w-full object-contain"
+                              className="size-4 object-contain"
                             />
                           ) : logoDomain ? (
-                            <span
-                              aria-hidden="true"
-                              className="text-xs font-bold"
-                            >
+                            <span aria-hidden="true" className="text-xs font-bold">
                               {social.platform.slice(0, 2).toUpperCase()}
                             </span>
                           ) : (
@@ -130,48 +178,11 @@ export default function ContactPage() {
                     );
                   })}
               </div>
-
-              <div className="mt-4 flex items-start gap-3 text-slate-900 md:col-span-2">
-                <svg
-                  aria-hidden="true"
-                  xmlns="http://www.w3.org/2000/svg"
-                  width="24"
-                  height="24"
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  stroke="currentColor"
-                  strokeWidth="2"
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  className="mt-1 h-6 w-6 shrink-0"
-                >
-                  <path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/>
-                  <circle cx="12" cy="10" r="3"/>
-                </svg>
-                <div className="min-w-0">
-                  <p className="wrap-break-words text-lg font-semibold">
-                    {profile.location}
-                  </p>
-                  <p className="mt-1 flex items-center gap-2 text-sm text-slate-600">
-                    <span aria-hidden="true" className="text-base">🟢</span>
-                    24/7 Available
-                  </p>
-                </div>
-              </div>
-            </div>
-
-            <div className="mt-16">
-              <h2 className="mb-8 text-2xl font-bold text-slate-900">Frequently Asked Questions</h2>
-              <Faq items={faqs} />
             </div>
           </div>
         </section>
-
-        <aside className="order-first flex min-w-0 flex-col gap-8 md:order-last">
-          <WelcomeMessage />
-          <Navbar />
-        </aside>
-      </div>
+      </main>
+      
     </div>
   );
 }

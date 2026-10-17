@@ -1,4 +1,3 @@
-import { profile } from "@/data/profile";
 import Image from "next/image";
 
 const logoDevToken = process.env.LOGO_DEV_PUBLISHABLE_KEY?.trim();
@@ -26,29 +25,13 @@ const outerProductivityTools = [
 ];
 
 export default function Hero() {
-  const { wrappedStats } = profile;
-  const stats = [
-    { label: "People Assisted", value: wrappedStats.Assisted },
-    { label: "Hours Saved", value: wrappedStats.hoursSaved },
-    { label: "Automations", value: wrappedStats.automations },
-    { label: "Money Saved", value: `$ ${wrappedStats.moneySaved}` },
-  ];
-
   return (
     <section className="order-last flex-1 md:order-first">
       <div className="grid items-center gap-8 lg:grid-cols-[minmax(0,1fr)_minmax(16rem,22rem)]">
-        <div className="grid grid-cols-2 gap-3 md:gap-6">
-          {stats.map((stat) => (
-            <div
-              key={stat.label}
-              className="rounded-xl border border-slate-200 bg-white p-3 text-center sm:p-6"
-            >
-              <p className="mb-2 text-3xl font-bold text-black [font-family:var(--font-rosemary)]">
-                {stat.value}
-              </p>
-              <h2 className="text-sm text-black">{stat.label}</h2>
-            </div>
-          ))}
+        <div className="flex min-h-[16rem] items-center justify-center p-6 text-center sm:min-h-[18rem]">
+          <h1 className="text-4xl font-bold tracking-tight text-black sm:text-5xl [font-family:var(--font-rosemary)]">
+            MY TECHNOLOGY
+          </h1>
         </div>
         <div className="relative mx-auto mt-4 aspect-square w-full max-w-22rem lg:mt-0">
           <div

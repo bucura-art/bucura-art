@@ -20,12 +20,12 @@ export const socials = [
   },
   {
     platform: "GitHub",
-    username: "heisdieudonne",
-    url: "https://github.com/heisdieudonne",
+    username: "bucura-art",
+    url: "https://github.com/bucura-art",
   },
   {
     platform: "LinkedIn",
-    username: "heisdieudonne",
-    url: "https://linkedin.com/in/heisdieudonne",
+    username: "bucura-art",
+    url: "https://linkedin.com/in/bucura-art",
   },
 ];
