@@ -4,8 +4,8 @@ export default function FullCertificates() {
   return (
     <section className="container py-24">
       <div>
-        <h3 className="text-2xl text-slate-900 font-semibold mb-8 flex items-center gap-2">
-          Certificates
+        <h3 className="text-2xl text-slate-900 font-bold mb-8 flex items-center gap-2">
+          Certificates Earned
         </h3>
         <div className="relative border-l border-border pl-8 space-y-12">
           {certificates.map((item, index) => (

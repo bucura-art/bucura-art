@@ -67,7 +67,7 @@ export default function ContactPage() {
       <main className="flex h-[100svh] items-center justify-start overflow-hidden px-4 pb-24 pt-4 md:px-8 md:pb-8 md:pt-24">
         <section
           aria-labelledby="contact-heading"
-          className="w-full max-w-[18rem] rounded-[2rem]  border-slate-900 bg-slate-400 p-1 shadow-xl shadow-slate-900/20"
+          className="w-full max-w-[18rem] rounded-4xl  border-slate-900 bg-slate-400 p-1 shadow-xl shadow-slate-900/20"
         >
           <div className="overflow-hidden rounded-[1.6rem] bg-white">
             <div className="flex justify-center bg-white pt-2" aria-hidden="true">

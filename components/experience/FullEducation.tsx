@@ -11,8 +11,8 @@ export default function FullEducation() {
       </div>
 
       <div>
-        <h3 className="text-2xl text-slate-900 font-semibold mb-8 flex items-center gap-2">
-          Education
+        <h3 className="text-2xl text-slate-900 font-bold mb-8 flex items-center gap-2">
+          Education Background
         </h3>
         <div className="relative border-l border-border pl-8 space-y-12">
           {education.map((item, index) => (
