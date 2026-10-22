@@ -8,7 +8,7 @@ const navLinks = [
   { name: "Work", href: "/work", icon: "folder" },
   { name: "Skills", href: "/skills", icon: "education" },
   { name: "Services", href: "/services", icon: "services" },
-  { name: "Contact", href: "/contact", icon: "contact" },
+  //{ name: "Contact", href: "/contact", icon: "contact" },
 ] as const;
 
 type NavIconName = (typeof navLinks)[number]["icon"];
@@ -30,7 +30,7 @@ function NavIcon({ name }: { name: NavIconName }) {
     );
   }
 
-  if (name === "contact") {
+  /*if (name === "contact") {
     return (
       <svg aria-hidden="true" viewBox="0 0 48 48" className="h-8 w-8 drop-shadow-sm group-hover:animate-bounce sm:h-10 sm:w-10">
         <defs>
@@ -46,7 +46,7 @@ function NavIcon({ name }: { name: NavIconName }) {
         <path d="M33 30.8c.4-.6 1-.7 1.6-.3l1.1.8c.4.3.5.8.3 1.2l-.5 1c.6 1.1 1.5 2 2.6 2.6l1-.5c.5-.2.9-.1 1.2.3l.8 1.1c.4.6.3 1.2-.3 1.6-.8.6-1.8.8-2.8.5-3.4-1-6.1-3.7-7.1-7.1-.3-1 .1-1.8 1.1-2.2Z" fill="#2580e8" />
       </svg>
     );
-  }
+  }*/
 
   if (name === "education") {
     return (
@@ -108,7 +108,7 @@ export default function Navbar({ topLeft = false }: { topLeft?: boolean }) {
   return (
     <nav
       aria-label="Main navigation"
-      className={`fixed inset-x-0 bottom-0 top-auto z-50 flex w-full max-w-full justify-center py-3 ${
+      className={`fixed inset-x-0 top-0 bottom-auto z-50 flex w-full max-w-full justify-center py-3 ${
         topLeft
           ? "md:fixed md:inset-x-auto md:bottom-auto md:left-6 md:top-6 md:w-fit md:justify-start md:py-0"
           : "md:sticky md:inset-x-auto md:bottom-auto md:top-0 md:w-full md:justify-end"

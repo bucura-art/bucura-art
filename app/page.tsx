@@ -8,7 +8,7 @@ export default function HomePage() {
       <div className="h-0 md:h-auto md:px-6 md:pt-6">
         <Navbar topLeft />
       </div>
-      <div className="grid w-full grid-cols-1 gap-12 px-4 pb-24 pt-16 md:grid-cols-[minmax(0,2fr)_minmax(0,1fr)] md:px-6 md:pt-8">
+      <div className="grid w-full grid-cols-1 gap-12 px-4 pb-24 pt-24 md:grid-cols-[minmax(0,2fr)_minmax(0,1fr)] md:px-6 md:pt-8">
         <main className="order-last min-w-0 md:order-first">
           <Hero />
         </main>

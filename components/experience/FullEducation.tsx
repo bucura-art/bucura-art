@@ -1,6 +1,6 @@
 import { education } from "@/data/education";
 
-export default function FullExperience() {
+export default function FullEducation() {
   return (
     <section className="container py-24">
       <div className="max-w-3xl mb-16">
@@ -12,7 +12,7 @@ export default function FullExperience() {
 
       <div>
         <h3 className="text-2xl text-slate-900 font-semibold mb-8 flex items-center gap-2">
-          Education Background
+          Education
         </h3>
         <div className="relative border-l border-border pl-8 space-y-12">
           {education.map((item, index) => (

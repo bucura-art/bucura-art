@@ -45,7 +45,7 @@ export default function BioPage() {
              <div className="space-y-8">
                 {education.map((edu, i) => (
                   <div key={i} className="border-l-2 border-border pl-6 relative">
-                    <div className="absolute -left-[5px] top-2 w-2 h-2 rounded-full bg-accent" />
+                    <div className="absolute -left-1.25px top-2 w-2 h-2 rounded-full bg-accent" />
                     <h3 className="text-lg font-medium text-orange-500 flex flex-wrap items-center gap-2">
                       {edu.title}
                     </h3>
