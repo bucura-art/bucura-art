@@ -1,44 +1,97 @@
-export const work = [
-  /*{
-    title: "Full stack web developer",
-    company: "FAST-EARN",
-    period: "2026",
-    type: "Personal Project",
-    description: "Developed a full stack web application, For making money online while watching ads.",
-  },*/
+export const projects = [
   {
-    title: "Web developer",
-    company: "Rogerz Bakery || 0790454357",
-    period: "2025",
-    type: "Freelance",
-    description: "Designed a logo and built the company website, creating a visual identity that reflects the brand's values and resonates with its target audience.",
+    slug: "dope-company",
+    name: "THE DOPE COMPANY",
+    logo: "/projects/dope-logo.png",
+    featured: true,
+    description:
+      "My personal company website, I want to create multiple projects for community use.",
+    categories: ["Founder", "Web Development"],
+    techStack: ["Next.js", "Tailwind CSS", "Framer motion", "Vercel"],
+    link: "https://dope-company.vercel.app",
   },
   {
-    title: "Web developer",
-    company: "PISTON TOUR AND SAFARIS || 0782002381",
-    period: "2026",
-    type: "Freelance",
-    description: "Designed logo and built the company website, ensuring a seamless user experience and responsive design to attract and engage potential customers.",
+    slug: "i-loaves",
+    name: "I LOAVES",
+    logo: "/projects/i-loaves-logo.png",
+    featured: true,
+    description:
+      "A modern bakery website where customers can find information about products, services, and locations, focused on clarity, trust, and performance.",
+    categories: ["Web Development"],
+    techStack: ["Next.js", "Tailwind CSS", "Framer motion", "Vercel"],
+    link: "https://i-loaves.com",
+  },
+  {
+    slug: "gorilla-exclusive",
+    name: "GORILLA EXCLUSIVE SAFARIS",
+    logo: "/projects/gorilla-logo.png",
+    featured: true,
+    description:
+      "A modern tourism website where travellers can find information about destinations, activities, and accommodations, focused on clarity, trust, and performance.",
+    categories: ["SEO"],
+    techStack: ["Next.js", "Tailwind CSS", "Framer motion", "Vercel"],
+    link: "https://gorillaexclusivesafaris.com",
+  },
+  {
+    slug: "bamenya-ai",
+    name: "BAMENYA AI",
+    logo: "/projects/bamenya-logo.png",
+    featured: true,
+    description: "A web application that provides AI-powered solutions for various tasks, such as anwering questions and personal daily tasks.",
+    categories: ["Web Application"],
+    techStack: ["Next.js", "Tailwind CSS", "Supabase", "Machine learning", "SSE","Cloudflare", "Pinecone", "Vercel", "Cloudinary", "groq", "RAG", "framer motion"],
+    link: "https://bamenya.vercel.app/",
   },
   /*{
-    title: "Full stack Web developer",
-    company: "UNILAK COMMUNITY",
-    period: "2025",
-    type: "Personal Project",
-    description: "Designed and developed personal web project, for UNILAK Community. A platform for sharing reviews, making announcements and facilitating communication within the UNILAK community.",
-  },*/
-  /*{
-    title: "Cleaner",
-    company: "MARINE COFFEE SHOP || 0785679466",
-    period: "2025",
-    type: "Part-time",
-    description: "Maintained cleanliness and hygiene standards in a busy coffee shop environment, ensuring a pleasant experience for customers.",
+    slug: "fast-earn.",
+    name: "FASTANA",
+    featured: false,
+    description: "A website for making money online while watching ads quickly and easily.",
+    techStack: ["Next.js", "Tailwind CSS", "Supabase", "Vercel"],
+    link: "https://fast-earn.vercel.app/",
   },*/
   {
-    title: "Networking Intern",
-    company: "DONA TECH LTD || 0781040002",
-    period: "2023",
-    type: "Internship",
-    description: "Assisting in networking equipments setup, configuration and troubleshooting for enterprise clients.",
+    slug: "piston-tours",
+    name: "PISTON TOUR AND SAFARIS",
+    logo: "/projects/piston-logo.png",
+    featured: true,
+    description:
+      "A modern tourism website where travellers can find information about destinations, activities, and accommodations, focused on clarity, trust, and performance.",
+    categories: ["Web Development"],
+    techStack: ["Next.js", "Tailwind CSS", "Framer motion", "Vercel"],
+    link: "https://piston-tours.vercel.app",
   },
+  {
+    slug: "hello-unilak",
+    name: "HELLO UNILAK",
+    logo: "/projects/unilak-logo.png",
+    featured: true,
+    description: "A website for UNILAK students to find classes, announcements and connect theough events.",
+    categories: ["Web Development"],
+    techStack: ["Next.js", "Tailwind CSS", "Supabase", "Vercel"],
+    link: "https://hello-unilak.vercel.app/",
+  },
+  {
+    slug: "health-space",
+    name: "HEALTH SPACE",
+    logo: "/projects/health-logo.png",
+    featured: false,
+    description: "A web and mobile application that provides AI-powered solutions, personalised insights, guided programs health facilities locator.",
+    categories: ["Web & Mobile App"],
+    techStack: ["Next.js", "Tailwind CSS", "Supabase", "Machine learning", "SSE","Cloudflare", "Pinecone", "Vercel", "Cloudinary", "groq", "RAG", "framer motion"],
+    link: "https://my-health-space.vercel.app/",
+  },
+ 
+ 
+ //comment this to always know how to add a project
+ // uncomment when you have a new project to add that is not yet ready to be published, but you want to keep the structure for future reference
+ 
+  /*{
+    slug: "coming-soon",
+    name: "Upcoming Project: my-portfolio!",
+    featured: true,
+    description: "It is about digital portifolio for everyone.",
+    techStack: ["Flutter", "Dart", "Firebase", "Node.js", "cloudinary"],
+    link: "",
+  },*/
 ];

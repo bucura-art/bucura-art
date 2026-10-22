@@ -1,34 +1,29 @@
 const useCaseGroups = [
   {
-    title: "Non-technical support",
+    title: "When",
     cases: [
       {
-        title: "Running out of time or got too much work",
+        title: "Running out of time",
         description:
           "A deadline is getting close and you need focused help to get the work across the line.",
       },
       {
-        title: "Tools selection or need human opinion",
+        title: "Need tools selection",
         description:
           "You’re weighing options or planning a project and want a fresh perspective, Let me help you make the right choice.",
       },
       {
-        title: "Need branding strategy or design",
+        title: "Need branding strategy",
         description:
           "You’re shaping how your business presents itself and want a clearer, more consistent brand.",
       },
-    ],
-  },
-  {
-    title: "Technical support",
-    cases: [
       {
-        title: "Are you stuck",
+        title: "Need help with a project",
         description:
           "A technical issue or project blocker is keeping you from making progress.",
       },
       {
-        title: "Website SEO & AEO",
+        title: "Need Website SEO & AEO",
         description:
           "You’re ready to launch a new website, improve an existing one, or get found online.",
       },

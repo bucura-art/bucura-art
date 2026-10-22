@@ -1,6 +1,6 @@
 import Link from "next/link";
 import { services } from "@/data/services";
-import UseCase from "@/components/home/UseCase";
+import UseCase from "@/components/services/UseCase";
 import WelcomeMessage from "@/components/layout/Welcome";
 import Navbar from "@/components/layout/Navbar";
 

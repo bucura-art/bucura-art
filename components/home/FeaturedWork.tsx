@@ -1,5 +1,5 @@
 import ProjectCard from "@/components/projects/ProjectCard";
-import { projects } from "@/data/projects";
+import { projects } from "@/data/work";
 import Link from "next/link";
 
 export default function FeaturedWork() {

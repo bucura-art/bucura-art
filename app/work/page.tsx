@@ -1,4 +1,4 @@
-import { projects } from "@/data/projects";
+import { projects } from "@/data/work";
 import ProjectCard from "@/components/projects/ProjectCard";
 import WelcomeMessage from "@/components/layout/Welcome";
 import Navbar from "@/components/layout/Navbar";
