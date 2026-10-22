@@ -1,6 +1,6 @@
 export const education = [
   {
-    title: "Bachelor’s Degree in Networking",
+    title: "Bachelor's Degree in Computing Information Science option of Networking",
     institution: "University of Lay Adventists of Kigali - UNILAK",
     period: "2025 - 2027",
     status: "Ongoing",

@@ -30,7 +30,7 @@ export default function Hero() {
       <div className="grid items-center gap-8 lg:grid-cols-[minmax(0,1fr)_minmax(16rem,22rem)]">
         <div className="flex min-h-[16rem] items-center justify-center p-6 text-center sm:min-h-[18rem]">
           <h1 className="text-4xl font-bold tracking-tight text-black sm:text-5xl [font-family:var(--font-rosemary)]">
-            MY TECHNOLOGY
+            THE TOOLS
           </h1>
         </div>
         <div className="relative mx-auto mt-4 aspect-square w-full max-w-22rem lg:mt-0">

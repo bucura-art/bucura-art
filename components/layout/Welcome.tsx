@@ -6,7 +6,7 @@ export default function WelcomeMessage() {
     <div className="hidden pt-14 md:block md:pt-0">
       <div className="flex items-start gap-4 rounded-2xl border border-slate-200 bg-white p-5 shadow-sm">
         <Image
-          src="/projects/bucura-logo.png"
+          src="/developer/profile-picture.jpg"
           alt={`${profile.name} avatar`}
           width={56}
           height={56}
